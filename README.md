@@ -9,7 +9,28 @@ This repository starts with a procedural medieval wooden door that:
 - exports to FBX for Unreal Engine 5
 - saves a `.blend` scene for inspection
 
+## Ready-made model
+
+`models/MedievalDoor_Animated.glb` is included in the repository.
+
+It contains:
+- medieval wooden door
+- stone frame / threshold
+- iron straps, hinges, and handle
+- three basic PBR materials: Wood / Iron / Stone
+- `Door_OpenClose` animation
+- hinge-centered opening motion: Closed -> 90 degrees Open -> Closed -> Hold
+- 3 second animation duration
+
+The GLB uses meter units. In UE5, use/enable the glTF importer for the `.glb` route.
+
 ## Quick start
+
+### Use the included model
+
+Import `models/MedievalDoor_Animated.glb` into Unreal Engine 5.
+
+### Generate the Blender / FBX version
 
 1. Install Blender 4.x.
 2. Open Blender.
@@ -23,7 +44,7 @@ Generated files:
 - `MedievalDoor_Animated.blend`
 - `MedievalDoor_Animated.fbx`
 
-## UE5 import
+## UE5 FBX import
 
 Import `MedievalDoor_Animated.fbx` into Unreal Engine 5.
 
@@ -33,7 +54,7 @@ Recommended first test:
 - Keep unit conversion enabled.
 - Verify the `DoorBone` animation from frame 1 to 72.
 
-The sample uses 24 FPS:
+The Blender sample uses 24 FPS:
 - Frame 1: closed
 - Frame 24: fully open (90 degrees)
 - Frame 48: closed
@@ -47,6 +68,8 @@ ue5-animation-generator/
 │  └─ medieval_door_animation.py
 ├─ docs/
 │  └─ UE5_IMPORT.md
+├─ models/
+│  └─ MedievalDoor_Animated.glb
 ├─ .gitignore
 └─ README.md
 ```
