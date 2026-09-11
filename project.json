@@ -1,0 +1,6 @@
+{
+  "name": "ue5-animation-generator",
+  "version": "0.1.0",
+  "purpose": "Procedural Blender animation generation for Unreal Engine 5",
+  "first_sample": "medieval_door_animation"
+}
